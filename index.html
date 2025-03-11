@@ -1,41 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Party Planner</title>
-  <script src="script.js" defer></script>
-  <style>
-    body {
-      background-color: deeppink;
-      color: yellowgreen;
-    }
-  </style>
-</head>
-<body>
-  <h1>Party Planner</h1>
+<html>
+  <head>
+    <title>Party Planner</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Party Planner</h1>
 
-  <div id="party-list">
-    </div>
+    <form id="partyForm">
+      <h2>Schedule a New Party</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
 
-  <form id="add-party-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br>
+      <label for="date">Date:</label>
+      <input type="date" id="date" required />
 
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date" required><br>
+      <label for="location">Location:</label>
+      <input type="text" id="location" required />
 
-    <label for="time">Time:</label>
-    <input type="time" id="time" name="time" required><br>
+      <label for="description">Description:</label>
+      <textarea id="description" required></textarea>
 
-    <label for="location">Location:</label>
-    <input type="text" id="location" name="location" required><br>
+      <button type="submit">Submit</button>
+    </form>
 
-    <label for="description">Description:</label>
-    <textarea id="description" name="description" required></textarea><br>
-
-    <button type="submit">Add Party</button>
-  </form>
-
-</body>
+    <h2>Party List</h2>
+    <ul id="partyList"></ul>
+  </body>
 </html>
